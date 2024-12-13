@@ -1,0 +1,33 @@
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-links a {
+    font-family: Bowler, sans-serif;
+    color: #deddd9;
+    text-decoration: none;
+    display: block;
+    padding: 9px 20px;
+    background-color: #3c4042;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+
+.nav-links li {
+    text-align: center;
+    margin: 5px;
+}
+@font-face {
+    font-family: 'Bowler';
+    src: url("../fonts/Bowler.ttf") format("truetype");
+    font-weight: normal;
+}

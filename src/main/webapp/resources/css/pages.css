@@ -1,0 +1,322 @@
+.start-title-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.start-title-header h1 {
+    font-size: 2.5em;
+    color: #2d2828; /* Яркий серый для заголовка */
+    margin-bottom: 10px;
+}
+
+.start-title-text {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333333; /* Темно-серый для текста */
+    margin: 0 20px;
+}
+
+.start-title-text p {
+    margin: 10px 0;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #d3d3d3; /* Светло-серая граница */
+    border-radius: 5px;
+    background-color: #f5f5f5; /* Очень светло-серый фон */
+}
+
+.section h2 {
+    color: #606060; /* Темно-серый для подзаголовков */
+    margin-bottom: 10px;
+}
+
+.section p {
+    margin: 5px 0;
+    color: #404040; /* Более насыщенный серый для акцентного текста */
+}
+
+strong {
+    color: #505050; /* Насыщенный серый для выделений */
+}
+
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url("../fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: bold;
+}
+.start-title-header {
+    font-family: Bowler, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.start-title-text {
+    display: grid;
+    place-items: center;
+    font-family: "Roboto Thin", sans-serif;
+    font-size: 20px;
+}
+
+@font-face {
+    font-family: 'Roboto Light';
+    src: url("../fonts/Roboto-Light.ttf") format("truetype");
+    font-weight: bold;
+}
+.combinatoric-containers {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+.num-input {
+    display: flex; /* Для горизонтального выравнивания */
+    align-items: center; /* Центрирование по вертикали */
+    gap: 10px; /* Пробел между элементами */
+    font-family: 'Arial', sans-serif; /* Современный шрифт */
+    font-size: 16px;
+    color: #333; /* Цвет текста */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f9; /* Светлый фон */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Контейнеры */
+.combinatoric-containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.permutations, .placement, .combination {
+    background: #ffffff; /* Белый фон */
+    border: 1px solid #ddd; /* Лёгкая рамка */
+    border-radius: 10px; /* Закруглённые углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    padding: 20px;
+    width: 300px;
+}
+
+/* Заголовки */
+h1 {
+    font-size: 1.5em;
+    color: #42494e; /* Графитовый акцент */
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd; /* Разделительная линия */
+    padding-bottom: 5px;
+}
+
+/* Формы */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.num-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.num-input p {
+    margin: 0;
+    font-weight: bold;
+}
+
+input[type="number"], input[type="submit"], button {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Поля ввода */
+input[type="number"] {
+    width: 80px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"]:focus {
+    border-color: #6c757d; /* Графитовый при фокусе */
+    box-shadow: 0 0 5px rgba(108, 117, 125, 0.5);
+}
+
+/* Кнопки */
+input[type="submit"], button {
+    background: #6c757d; /* Графитовый фон */
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover, button:hover {
+    background: #5a6268; /* Темнее при наведении */
+}
+
+button {
+    margin-top: 10px;
+}
+
+/* Ответы */
+p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+p:empty {
+    display: none; /* Скрываем пустые ответы */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .combinatoric-containers {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Ответы */
+p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+    word-wrap: break-word; /* Перенос длинных слов */
+    word-break: break-word; /* Перенос слов по необходимости */
+    white-space: normal; /* Отключаем фиксированное пространство */
+}
+
+p:empty {
+    display: none; /* Скрываем пустые ответы */
+}
+
+/* Урновая модель */
+.urn-model-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.urn-model {
+    background: #ffffff; /* Белый фон */
+    border: 1px solid #ddd; /* Лёгкая рамка */
+    border-radius: 10px; /* Закруглённые углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    padding: 20px;
+    width: 300px;
+    font-family: 'Arial', sans-serif;
+}
+
+.urn-model h2 {
+    font-size: 1.3em;
+    color: #42494e;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Формы урновой модели */
+.urn-model-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Стиль для всех полей ввода в урновой модели */
+/* Стиль для всех полей ввода в урновой модели */
+.urn-model-form .num-input {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Slightly increased space between label and input */
+}
+
+.urn-model-form .num-input label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+    margin-right: 8px; /* Ensures there's some space between the label and input */
+    white-space: nowrap; /* Prevents label text from breaking into multiple lines */
+}
+
+/* Поля ввода в урновой модели */
+.urn-model-form input[type="number"] {
+    width: 100%; /* Ensures input takes full available width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Увеличенные стили для фокуса на полях ввода */
+.urn-model-form input[type="number"]:focus {
+    border-color: #6c757d;
+    box-shadow: 0 0 5px rgba(108, 117, 125, 0.5);
+}
+
+/* Кнопка отправки */
+.urn-model-form input[type="submit"] {
+    background: #6c757d;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.urn-model-form input[type="submit"]:hover {
+    background-color: #5a6268;
+}
+
+/* Ответы */
+.urn-model-form .answer {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 768px) {
+    .urn-model-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .urn-model {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .urn-model-form input[type="number"], .urn-model-form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+
+
+
