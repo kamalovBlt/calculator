@@ -76,6 +76,10 @@ public class ApplicationController {
             int m = Integer.parseInt(params.get("m"));
             int k = Integer.parseInt(params.get("k"));
             int r = Integer.parseInt(params.get("r"));
+            if (n - m < k -r) {
+                model.addAttribute(formtype, "(n - m) должно быть больше (k - r)");
+                return "urnmodel";
+            }
             if (n < 1) {
                 model.addAttribute(formtype, "n должно быть больше 1");
                 return "urnmodel";
@@ -85,15 +89,12 @@ public class ApplicationController {
                 return "urnmodel";
             }
 
-            if (k > m) {
-                model.addAttribute(formtype, "k должно быть меньше m");
-                return "urnmodel";
-            }
             if (r > k) {
                 model.addAttribute(formtype, "r должно быть меньше k");
                 return "urnmodel";
             }
             BigDecimal result = UrnModel.samplingWithACertainNumber(n, m, k, r);
+            System.out.println(result);
             model.addAttribute(formtype, result);
             return "urnmodel";
         }
@@ -140,10 +141,6 @@ public class ApplicationController {
         if (formtype.equals("placement-repeat")) {
             int n = Integer.parseInt(params.get("n"));
             int k = Integer.parseInt(params.get("k"));
-            if (k > n) {
-                model.addAttribute(formtype.replaceAll("-", "") + "result", "k должно быть меньше n");
-                return "combinatoric";
-            }
             BigInteger result = Combinatoric.getPlacementWithRepeat(n, k);
             model.addAttribute(formtype.replaceAll("-", "") + "result", result);
         }
@@ -162,11 +159,11 @@ public class ApplicationController {
         if (formtype.equals("combination-repeat")) {
             int n = Integer.parseInt(params.get("n"));
             int k = Integer.parseInt(params.get("k"));
-            if (k > n || n < 1) {
+            if (n < 1 || k > n + k - 1) {
                 model.addAttribute(formtype.replaceAll("-", "") + "result", "k должно быть меньше n и n должно быть больше 1");
                 return "combinatoric";
             }
-            BigInteger result = Combinatoric.getCombination(n, k);
+            BigInteger result = Combinatoric.getCombinationWithRepeat(n, k);
             model.addAttribute(formtype.replaceAll("-", "") + "result", result);
         }
         if (formtype.equals("combination-no-repeat")) {
@@ -176,7 +173,7 @@ public class ApplicationController {
                 model.addAttribute(formtype.replaceAll("-", "") + "result", "k должно быть меньше n");
                 return "combinatoric";
             }
-            BigInteger result = Combinatoric.getCombinationWithRepeat(n, k);
+            BigInteger result = Combinatoric.getCombination(n, k);
             model.addAttribute(formtype.replaceAll("-", "") + "result", result);
         }
 

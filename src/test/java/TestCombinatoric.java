@@ -41,7 +41,7 @@ public class TestCombinatoric {
 
     @Test
     public void testGetPlacementWithRepeatRandomData() {
-        Assert.assertEquals(Combinatoric.getPlacementWithRepeat(5, 3), BigInteger.valueOf(125));
+        Assert. assertEquals(Combinatoric.getPlacementWithRepeat(5, 3), BigInteger.valueOf(125));
     }
     @Test
     public void testGetPlacementWithRepeatZeroData() {
